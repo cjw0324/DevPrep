@@ -1,6 +1,5 @@
-# Chill Team
-
-프로그래머스 백엔드 데브코스 4기 5회차 7팀 Chill-Team 3차 팀 프로젝트입니다.
+# DevPrep : Chill Team
+프로그래머스 백엔드 데브코스 4기 7팀 : DevPrep 프로젝트
 
 ## Member
 

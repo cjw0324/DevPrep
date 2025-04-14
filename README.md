@@ -95,16 +95,6 @@
 
 ## 📌 추가 문서
 
-### 🔗 ERD
-<img src="https://github.com/user-attachments/assets/d3b97c6a-ecad-47a0-876f-ac1aea5246b5" width="600">
-
-### 📜 프로젝트 기획
-
-- [Notion-Link](https://www.notion.so/1c73550b7b5581c48105eab55af65f9c?pvs=4)
-
-### 📌 API 명세서
-- [Notion-Link](https://www.notion.so/API-1c73550b7b558183b245fd5659d64abe?pvs=4#1d23550b7b558022a628c45279c3412c)
-
 ### 🛠 Git 컨벤션
 - [Wiki](https://github.com/prgrms-be-devcourse/NBE4-5-3-Team07/wiki/Git-Convention)
 

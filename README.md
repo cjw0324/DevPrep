@@ -18,6 +18,9 @@
 - [devprep.shop](https://devprep.shop) - 배포 중
 <img src="https://github.com/user-attachments/assets/e8527c12-1a3b-44c1-aa6a-3faeae4a0b2f" width="1000">
 
+### 📝 프로젝트 기획, 요구사항 및 API 명세서
+- [DevPrep notion](https://sincere-scabiosa-36d.notion.site/DevPrep-1d529d746aff803f963ed302fcddf97b?pvs=4)
+
 ---
 
 ### 2. 프로젝트 소개

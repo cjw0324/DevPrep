@@ -9,38 +9,38 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: ✅ 코드 체크아웃
+    - name: 코드 체크아웃
       uses: actions/checkout@v4
 
-    - name: 🔐 백엔드 application-secret.yml 생성
+    - name: application-secret.yml 생성
       run: |
         echo "${{ secrets.BACKEND_SECRET_YML }}" > ./backend/src/main/resources/application-secret.yml
 
-    - name: 🔐 프론트엔드 .env.production 생성
+    - name: 프론트 .env.production 생성
       run: |
         echo "${{ secrets.FRONTEND_ENV }}" > ./frontend/.env.production
 
 
-    - name: 🛠️ 백엔드 JAR 빌드
+    - name: 백엔드 JAR 빌드
       working-directory: ./backend
       run: |
         chmod +x ./gradlew
         ./gradlew clean build -x test
 
-    - name: 🐳 DockerHub 로그인
+    - name: DockerHub 로그인
       run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
 
-    - name: 🧱 백엔드 Docker 이미지 빌드 & 푸시
+    - name: 백엔드 Docker 이미지 빌드 & 푸시
       run: |
         docker build -t ${{ secrets.DOCKER_USERNAME }}/backend-app ./backend
         docker push ${{ secrets.DOCKER_USERNAME }}/backend-app
 
-    - name: 🧱 프론트엔드 Docker 이미지 빌드 & 푸시
+    - name: 프론트엔드 Docker 이미지 빌드 & 푸시
       run: |
         docker build -t ${{ secrets.DOCKER_USERNAME }}/frontend-app ./frontend
         docker push ${{ secrets.DOCKER_USERNAME }}/frontend-app
 
-    - name: 🚀 EC2에 배포
+    - name: EC2에 배포
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.EC2_HOST }}
